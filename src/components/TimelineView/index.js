@@ -44,5 +44,4 @@ export const CCBPHeading = styled.span`
   @media screen and (min-width:768px) {
     font-size:30px;
   }
-`  
-
+`
