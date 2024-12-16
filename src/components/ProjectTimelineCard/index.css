@@ -1,34 +1,34 @@
-import {AiFillCalender} from 'react-icons/ai' ,
+import {AiFillCalender} from 'react-icons/ai'
 
-import {          , 
-  ProjectCardContainer,         ,
-  ProjectImage,    ,
-  ProjectTitleAndDurationContainer,          ,
-  ProjectTitle,          ,
-  DurationContainer,            ,
-  Duration,    ,
-  ProjectDescription,            ,
-  VisitLink,             ,
-} from './styledComponents'            ,
+import {
+  ProjectCardContainer,
+  ProjectImage,
+  ProjectTitleAndDurationContainer,
+  ProjectTitle,
+  DurationContainer,
+  Duration,
+  ProjectDescription,
+  VisitLink,
+} from './styledComponents'
 
-const ProjectTimelineCard = props => {       ,
-  const {projectDetails} = props          ,
-  const {imageUrl, projectTitle, description, projectUrl, duration} =    ,
-    ProjectDetails ,
+const ProjectTimelineCard = props => {
+  const {projectDetails} = props
+  const {imageUrl, projectTitle, description, projectUrl, duration} =
+    ProjectDetails
 
   return (
     <ProjectCardContainer>
-      <ProjectImage, src={imageUrl} alt="project" />     ,
-      <ProjectTitleAndDurationContainer>       ,
-        <ProjectTitle>{projectTitle}</ProjectTitle>       ,
-        <DurationContainer>   ,
-          <AiFillCalender color="#171f46" />     ,
-          <Duration>{duration}</Duration> ,
-        </DurationContainer>              ,
-      </ProjectTitleAndDurationContainer>       ,
-      <ProjectDescription>{description}</ProjectDescription>        ,
-      <VisitLink href={projectUrl}>Visit</VisitLink>       ,
-    </ProjectCardContainer>        ,
+      <ProjectImage, src={imageUrl} alt="project" />
+      <ProjectTitleAndDurationContainer>
+        <ProjectTitle>{projectTitle}</ProjectTitle>
+        <DurationContainer>
+          <AiFillCalender color="#171f46" />
+          <Duration>{duration}</Duration>
+        </DurationContainer>
+      </ProjectTitleAndDurationContainer>
+      <ProjectDescription>{description}</ProjectDescription>
+      <VisitLink href={projectUrl}>Visit</VisitLink>
+    </ProjectCardContainer>
   )            
 }
 
