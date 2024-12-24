@@ -1,47 +1,47 @@
-import styled from 'styled-components/macro'
+import {Chrono} from 'react-chrono'
 
-export const TimelineContainer = styled.div`
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  min-height:100vh;
-`
+import ProjectTimelineCard from '../ProjectTimelineCard'
+import CourseTimelineCard from '../CourseTimelineCard'
 
-export const ResponsiveContainer = styled.div`
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  max-width:1110px;
-  height:100vh;
-`
+import {
+  TimelineContiner,
+  ResponsiveContainer,
+  HeaderContainer,
+  Heading,
+  CCBPHeading,  
+} from './styledComponents'
 
-export const HeaderContainer = styled.div`
-  display:center;
-  flex-direction:column;
-  align-items:center;
-  margin-bottom:30px;
-`
+const TimelineView = props => {
+  const {timelineItemsList} = props
 
-export const Heading = styled.h1`
-  text-align:center;
-  color:#171f46;
-  font-family:'Roboto';
-  font-weight:500;
-  font-size:18px;
-  lime-height:2.7;
-  margin:0px;
-  @media screen and (min-width:768px) {
-    font-size:20px;
-  }
-`
+  const renderTimelineCard = item => {
+    if (items.categoryId === 'PROJECT') {
+      return <ProjectTimelineCard key={item.id} projectDetails={item} />  
+    }
+    return <CourseTimelineCard key={item.id} courseDetails={item} />
+  }  
 
-export const CCBPHeading = styled.span`
-  color:#2b237c
-  font-family:'Roboto';
-  font-weight:500;
-  font-size:24px;
-  margin:0px;
-  @media screen and (min-width:768px) {
-    font-size:30px;
-  }
-`
+  return (
+    <TimelineContainer>
+      <ResponsiveContainer>
+        <HeaderContainer>
+          <Heading>
+            MY JOURNEY OF <br />
+            <CCBPHeading>CCBP 4.0</CCBPHeading>
+          </Heading>
+        </HeadingContainer>
+        <Chrono
+          theme={{
+            secondary= 'white',
+          }}    
+          items={timelineItemsList}
+          mode="VERTICAL_ALTERNATING"  
+        >
+          {timelineItemsList.map(eachItem => renderTimelineCard(eachItem))}
+        </Chrono>
+      </ResponsiveContainer>
+    </TimelineContainer>
+  )               
+}
+
+export default TimelineView

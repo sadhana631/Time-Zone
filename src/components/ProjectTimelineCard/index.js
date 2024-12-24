@@ -1,77 +1,35 @@
-import styled from 'styled-components/macro'
+import {AiFillCalender} from 'react-icons/ai'
 
-export const ProjectCardContainer = styled.div`
-  width:100%;
-  height:100%;
-  margin-top:7px;
-  margin-bottom:7px;
-`
+import {
+  ProjectCardContainer,
+  ProjectImage,
+  ProjectTitleAndDurationContainer,
+  ProjectTitle,
+  DurationContainer,
+  Duration,
+  ProjectDescription,
+  VisitLink,
+} from './styledComponents'
 
-export const ProjectImage = styled.img`
-  width:100%;
-  height:100%;
-`
+const ProjectTimelineCard = props => {
+  const {projectDetails} = props
+  const {imageUrl, projectTitle, description, projectUrl, duration} =
+   projectDetails
 
-export const ProjectTitleAndDurationContainer = styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  align-items:flex-start;
-  @media screen and (min-width:768px) {
-    flex-direction:row;
-    algn-items:center;
-  }
-`
+  return (
+    <ProjectCardContainer>
+      <ProjectImage src={imageUrl} alt="project" />
+      <ProjectTitleAndDurationContainer>
+        <ProjectTitle>{projectTitle}</ProjectTitle>
+        <DurationContainer>
+          <AiFillCalender color="#171f46" />
+          <Duration>{duration}</Duration>
+        </DurationContainer>
+      </ProjectTitleAndDurationContainer>
+      <ProjectDescription>{description}</ProjectDescription>
+      <VisitLink href={projectUrl}>Visit</VisitLink>
+    </ProjectCardContainer>
+  )            
+}
 
-export const ProjectTitle = styled.h1`
-  color:#171f46;
-  font-family:'Roboto';
-  font-size:20px;
-  font-weight:700;
-  line-height:1.3;
-  margin:0px;
-  @media screen and (min-width:768px) {
-    font-size:24px;
-  }
-`
-
-export const DurationContainer = styled.div`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-`
-
-export const Duration = styled.p`
-  color:#171f46;
-  font-family:'Roboto';
-  font-size:12px;
-  font-weight:600;
-  line-height:4px;
-  @media screen and (min-width:768px) {
-    font-size:14px;
-  }
-`
-
-export const ProjectDescription = styled.p`
-  color:#1e293b;
-  font-family:'Roboto';
-  font-size:12px;
-  line-height:1.5;
-  margin-top:0px;
-  @media screen and (min-width:768px) {
-  }
-`
-
-export const VisitLink = styled.a`
-  text-align:center;
-  color:#0967d2;
-  font-family:'Roboto';
-  font-size:14px;
-  font-weight:600;
-  line-height:1.2;
-  text-decoration::none;
-  margin-top:5px;
-  @media screen and (min-width:768px) {
-    font-size:18px;
-  }
-`
+export default ProjectTimelineCard
