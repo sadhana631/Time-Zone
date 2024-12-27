@@ -1,10 +1,13 @@
 import {Chrono} from 'react-chrono'
 
+
 import ProjectTimelineCard from '../ProjectTimelineCard'
 import CourseTimelineCard from '../CourseTimelineCard'
 
+
 const TimelineView = props => {
   const {timelineItemsList} = props
+
 
   const renderTimelineCard = item => {
     if (item.categoryId === 'PROJECT') {
@@ -12,6 +15,7 @@ const TimelineView = props => {
     }
     return <CourseTimelineCard key={item.id} courseDetails={item} />
   }
+
 
   return (
     <div>
@@ -35,5 +39,6 @@ const TimelineView = props => {
     </div>
   )
 }
+
 
 export default TimelineView
