@@ -1,9 +1,23 @@
 import {AiFillCalender} from 'react-icons/ai'
 
+
+import {
+ ProjectCardContainer,
+ ProjectImage,
+ ProjectTitleAndDurationContainer,
+ ProjectTitle,
+ DurationContainer,
+ Duration,
+ ProjectDescription,
+ VisitLink,
+} from './styledComponents'
+
+
 const ProjectTimelineCard = props => {
   const {projectDetails} = props
   const {imageUrl, projectTitle, description, projectUrl, duration} =
     projectDetails
+
 
   return (
     <ProjectCardContainer>
@@ -19,5 +33,6 @@ const ProjectTimelineCard = props => {
     </ProjectCardContainer>
   )
 }
+
 
 export default ProjectTimelineCard
