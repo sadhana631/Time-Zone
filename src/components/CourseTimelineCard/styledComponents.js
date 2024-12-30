@@ -60,7 +60,7 @@ export const CourseTagsList = styled.ul`
   margin:0px;
 `
 
-export const CourseTagsItem = styled.l1`
+export const CourseTagsItem = styled.li`
   list-style-type:none;
 `
 

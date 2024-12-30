@@ -1,5 +1,4 @@
-import {AiFillCalender} from 'react-icons/ai'
-
+import {AiFillCalendar} from 'react-icons/ai'
 
 import {
   ProjectCardContainer,
@@ -12,16 +11,15 @@ import {
   VisitLink,
 } from './styledComponents'
 
-
 const ProjectTimelineCard = props => {
   const {projectDetails} = props
   const {
    imageUrl, 
    projectTitle, 
    description, 
-   projectUrl, 
+   projectUrl,
    duration,
-  } = projectDetails
+  } =  projectDetails
 
 
   return (
@@ -30,7 +28,7 @@ const ProjectTimelineCard = props => {
       <ProjectTitleAndDurationContainer>
         <ProjectTitle>{projectTitle}</ProjectTitle>
         <DurationContainer>
-          <AiFillCalender color="#171f46" />
+          <AiFillCalendar color="#171f46" />
         </DurationContainer>
       </ProjectTitleAndDurationContainer>
       <ProjectDescription>{description}</ProjectDescription>

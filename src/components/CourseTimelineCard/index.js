@@ -2,7 +2,7 @@ import {AiFillClockCircle} from 'react-icons/ai'
 
 import {
   CourseTitleAndDurationContainer,
-  courseTitle,
+  CourseTitle,
   DurationContainer,
   Duration,
   CourseDescription,
