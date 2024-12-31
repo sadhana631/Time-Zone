@@ -13,14 +13,8 @@ import {
 
 const ProjectTimelineCard = props => {
   const {projectDetails} = props
-  const {
-   imageUrl, 
-   projectTitle, 
-   description, 
-   projectUrl,
-   duration,
-  } =  projectDetails
-
+  const {imageUrl, projectTitle, description, projectUrl, duration} =
+    projectDetails
 
   return (
     <ProjectCardContainer>
@@ -28,7 +22,7 @@ const ProjectTimelineCard = props => {
       <ProjectTitleAndDurationContainer>
         <ProjectTitle>{projectTitle}</ProjectTitle>
         <DurationContainer>
-          <AiFillCalendar color="#171f46" />
+          <AiFillCalendar color="#171f46" /> <p>{projectDetails.duration}</p>
         </DurationContainer>
       </ProjectTitleAndDurationContainer>
       <ProjectDescription>{description}</ProjectDescription>
@@ -36,6 +30,5 @@ const ProjectTimelineCard = props => {
     </ProjectCardContainer>
   )
 }
-
 
 export default ProjectTimelineCard

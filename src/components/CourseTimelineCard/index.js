@@ -1,5 +1,6 @@
 import {AiFillClockCircle} from 'react-icons/ai'
 
+
 import {
   CourseTitleAndDurationContainer,
   CourseTitle,
@@ -11,9 +12,11 @@ import {
   CourseTag,
 } from './styledComponents'
 
+
 const CourseTimelineCard = props => {
   const {courseDetails} = props
   const {courseTitle, description, duration, tagsList} = courseDetails
+
 
   return (
     <>
@@ -35,5 +38,6 @@ const CourseTimelineCard = props => {
     </>
   )
 }
+
 
 export default CourseTimelineCard
